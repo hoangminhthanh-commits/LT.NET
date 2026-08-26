@@ -1,4 +1,8 @@
 <Solution>
-  <Project Path="BaiTap1.1/BaiTap1.1.csproj" />
   <Project Path="BaiTap1.2/BaiTap1.2.csproj" />
+  <Project Path="BaiTap3.1/BaiTap3.1.csproj" Id="f6eb95d8-6bdb-4526-a6a5-436bce5e7096" />
+  <Project Path="BaiTap3.2/BaiTap3.2.csproj" Id="86afae08-78bf-4d72-9a98-2da352e8dcae" />
+  <Project Path="BaiTap3.3/BaiTap3.3.csproj" Id="539ec47f-4ab5-4263-aa9d-4f10ce5f254f" />
+  <Project Path="BaiTap3.4/BaiTap3.4.csproj" Id="72a5b164-5cc7-4f67-b166-f9b15c7b6810" />
+  <Project Path="CaiDatMoiTruong/CaiDatMoiTruong.csproj" Id="bef784d0-ddc6-4edc-931b-330a3f9f1737" />
 </Solution>
