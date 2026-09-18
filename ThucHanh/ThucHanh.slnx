@@ -4,4 +4,9 @@
   <Project Path="Bai1.3/Bai1.3.csproj" />
   <Project Path="Bai1.4/Bai1.4.csproj" Id="d7e77a50-9863-48aa-94c1-f637cfc4d132" />
   <Project Path="Bai1.5/Bai1.5.csproj" Id="16bc0b61-b9e5-46d6-9160-7a4e377759ee" />
+  <Project Path="Bai2.1/Bai2.1.csproj" Id="47bd3c46-b05e-4638-9dd0-fae9c354c23d" />
+  <Project Path="Bai2.2/Bai2.2.csproj" Id="c0d19a6a-8b7a-4b42-99c1-a2e070b246a1" />
+  <Project Path="Bai2.3/Bai2.3.csproj" Id="0dcbba7b-2339-4a69-8780-ca8261254e07" />
+  <Project Path="Bai2.4/Bai2.4.csproj" Id="71f4a7cd-08a4-4cb1-9c37-70e70db0fb76" />
+  <Project Path="Bai2.5/Bai2.5.csproj" Id="571d7605-bc30-4da7-8011-acf856cccacb" />
 </Solution>
