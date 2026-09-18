@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Calculator/Calculator.csproj" Id="70d3240e-8fc5-46fb-8a8b-bedc4e4759e1" />
+  <Project Path="DangKyKhoaHoc/DangKyKhoaHoc.csproj" Id="ce150132-aba1-49f0-a8c3-556c84d07088" />
+  <Project Path="DatHangFastFood/DatHangFastFood.csproj" Id="b99b2a3c-1c31-40e2-a4c1-b9952ea6ea80" />
+  <Project Path="WinForms1/LoginForm.csproj" />
+</Solution>
