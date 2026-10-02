@@ -86,11 +86,12 @@
             tlpMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65F));
             tlpMain.Controls.Add(grpProduct, 0, 0);
             tlpMain.Controls.Add(pnlData, 1, 0);
-            tlpMain.Location = new Point(0, 27);
+            tlpMain.Dock = DockStyle.Fill;
+            tlpMain.Location = new Point(0, 0);
             tlpMain.Name = "tlpMain";
             tlpMain.RowCount = 1;
             tlpMain.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tlpMain.Size = new Size(982, 522);
+            tlpMain.Size = new Size(982, 578);
             tlpMain.TabIndex = 0;
             // 
             // grpProduct
@@ -99,16 +100,17 @@
             grpProduct.Dock = DockStyle.Fill;
             grpProduct.Location = new Point(3, 3);
             grpProduct.Name = "grpProduct";
-            grpProduct.Size = new Size(337, 516);
+            grpProduct.Size = new Size(337, 572);
             grpProduct.TabIndex = 0;
             grpProduct.TabStop = false;
             grpProduct.Text = "Thông tin sản phẩm";
             // 
             // tlpInput
             // 
-            tlpInput.ColumnCount = 2;
+            tlpInput.ColumnCount = 3;
             tlpInput.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
             tlpInput.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65F));
+            tlpInput.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 25F));
             tlpInput.Controls.Add(btnUpdate, 1, 7);
             tlpInput.Controls.Add(txtQuantity, 1, 4);
             tlpInput.Controls.Add(txtUnitPrice, 1, 3);
@@ -129,21 +131,21 @@
             tlpInput.Location = new Point(3, 23);
             tlpInput.Name = "tlpInput";
             tlpInput.RowCount = 9;
-            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8.695652F));
-            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8.695652F));
-            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8.695652F));
-            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8.695652F));
-            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8.695652F));
-            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 32.608696F));
-            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8.695652F));
-            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 7.60869551F));
-            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 7.60869551F));
-            tlpInput.Size = new Size(331, 490);
+            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 34F));
+            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            tlpInput.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tlpInput.Size = new Size(331, 546);
             tlpInput.TabIndex = 0;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(118, 414);
+            btnUpdate.Location = new Point(110, 446);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(94, 29);
             btnUpdate.TabIndex = 15;
@@ -152,32 +154,32 @@
             // 
             // txtQuantity
             // 
-            txtQuantity.Dock = DockStyle.Fill;
-            txtQuantity.Location = new Point(118, 171);
+            txtQuantity.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtQuantity.Location = new Point(110, 175);
             txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(210, 27);
+            txtQuantity.Size = new Size(192, 27);
             txtQuantity.TabIndex = 9;
             // 
             // txtUnitPrice
             // 
-            txtUnitPrice.Dock = DockStyle.Fill;
-            txtUnitPrice.Location = new Point(118, 129);
+            txtUnitPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtUnitPrice.Location = new Point(110, 132);
             txtUnitPrice.Name = "txtUnitPrice";
-            txtUnitPrice.Size = new Size(210, 27);
+            txtUnitPrice.Size = new Size(192, 27);
             txtUnitPrice.TabIndex = 8;
             // 
             // txtProductName
             // 
-            txtProductName.Dock = DockStyle.Fill;
-            txtProductName.Location = new Point(118, 45);
+            txtProductName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtProductName.Location = new Point(110, 46);
             txtProductName.Name = "txtProductName";
-            txtProductName.Size = new Size(210, 27);
+            txtProductName.Size = new Size(192, 27);
             txtProductName.TabIndex = 6;
             // 
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
-            lblQuantity.Location = new Point(3, 168);
+            lblQuantity.Location = new Point(3, 172);
             lblQuantity.Name = "lblQuantity";
             lblQuantity.Size = new Size(72, 20);
             lblQuantity.TabIndex = 4;
@@ -186,7 +188,7 @@
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Location = new Point(3, 84);
+            lblCategory.Location = new Point(3, 86);
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(79, 20);
             lblCategory.TabIndex = 2;
@@ -195,7 +197,7 @@
             // lblUnitPrice
             // 
             lblUnitPrice.AutoSize = true;
-            lblUnitPrice.Location = new Point(3, 126);
+            lblUnitPrice.Location = new Point(3, 129);
             lblUnitPrice.Name = "lblUnitPrice";
             lblUnitPrice.Size = new Size(65, 20);
             lblUnitPrice.TabIndex = 3;
@@ -203,20 +205,20 @@
             // 
             // txtProductId
             // 
-            txtProductId.Dock = DockStyle.Fill;
-            txtProductId.Location = new Point(118, 3);
+            txtProductId.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtProductId.Location = new Point(110, 3);
             txtProductId.Name = "txtProductId";
-            txtProductId.Size = new Size(210, 27);
+            txtProductId.Size = new Size(192, 27);
             txtProductId.TabIndex = 5;
             // 
             // cboCategory
             // 
-            cboCategory.Dock = DockStyle.Fill;
+            cboCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cboCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCategory.FormattingEnabled = true;
-            cboCategory.Location = new Point(118, 87);
+            cboCategory.Location = new Point(110, 89);
             cboCategory.Name = "cboCategory";
-            cboCategory.Size = new Size(210, 28);
+            cboCategory.Size = new Size(192, 28);
             cboCategory.TabIndex = 7;
             // 
             // lblProductId
@@ -231,7 +233,7 @@
             // lblProductName
             // 
             lblProductName.AutoSize = true;
-            lblProductName.Location = new Point(3, 42);
+            lblProductName.Location = new Point(3, 43);
             lblProductName.Name = "lblProductName";
             lblProductName.Size = new Size(55, 20);
             lblProductName.TabIndex = 1;
@@ -240,16 +242,16 @@
             // picAvatar
             // 
             picAvatar.Dock = DockStyle.Fill;
-            picAvatar.Location = new Point(118, 213);
+            picAvatar.Location = new Point(110, 218);
             picAvatar.Name = "picAvatar";
-            picAvatar.Size = new Size(210, 153);
+            picAvatar.Size = new Size(192, 179);
             picAvatar.SizeMode = PictureBoxSizeMode.Zoom;
             picAvatar.TabIndex = 10;
             picAvatar.TabStop = false;
             // 
             // btnChooseImage
             // 
-            btnChooseImage.Location = new Point(118, 372);
+            btnChooseImage.Location = new Point(110, 403);
             btnChooseImage.Name = "btnChooseImage";
             btnChooseImage.Size = new Size(94, 29);
             btnChooseImage.TabIndex = 11;
@@ -258,7 +260,7 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(118, 451);
+            btnClear.Location = new Point(110, 489);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 29);
             btnClear.TabIndex = 14;
@@ -267,7 +269,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(3, 451);
+            btnDelete.Location = new Point(3, 489);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 29);
             btnDelete.TabIndex = 13;
@@ -276,7 +278,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(3, 414);
+            btnAdd.Location = new Point(3, 446);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(94, 29);
             btnAdd.TabIndex = 12;
@@ -289,7 +291,7 @@
             pnlData.Dock = DockStyle.Fill;
             pnlData.Location = new Point(346, 3);
             pnlData.Name = "pnlData";
-            pnlData.Size = new Size(633, 516);
+            pnlData.Size = new Size(633, 572);
             pnlData.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -304,18 +306,19 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
-            tableLayoutPanel1.Size = new Size(633, 516);
+            tableLayoutPanel1.Size = new Size(633, 572);
             tableLayoutPanel1.TabIndex = 9;
             // 
             // dgvProducts
             // 
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProducts.Columns.AddRange(new DataGridViewColumn[] { colProductId, colProductName, colCategory, colUnitPrice, colQuantity });
-            dgvProducts.Location = new Point(3, 106);
+            dgvProducts.Dock = DockStyle.Fill;
+            dgvProducts.Location = new Point(3, 117);
             dgvProducts.Name = "dgvProducts";
             dgvProducts.RowHeadersWidth = 51;
             dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProducts.Size = new Size(627, 322);
+            dgvProducts.Size = new Size(627, 452);
             dgvProducts.TabIndex = 9;
             // 
             // colProductId
@@ -365,7 +368,7 @@
             pnlSearch.Dock = DockStyle.Fill;
             pnlSearch.Location = new Point(3, 3);
             pnlSearch.Name = "pnlSearch";
-            pnlSearch.Size = new Size(627, 97);
+            pnlSearch.Size = new Size(627, 108);
             pnlSearch.TabIndex = 4;
             // 
             // txtSearch

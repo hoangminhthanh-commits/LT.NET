@@ -49,12 +49,14 @@ namespace Bai03
             dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProducts.MultiSelect = false;
             dgvProducts.ReadOnly = true;
+            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             colProductId.DataPropertyName = "ProductId";
             colProductName.DataPropertyName = "ProductName";
             colCategory.DataPropertyName = "CategoryName";
             colUnitPrice.DataPropertyName = "UnitPrice";
             colQuantity.DataPropertyName = "Quantity";
-            colUnitPrice.DefaultCellStyle.Format = "N0";
+            colUnitPrice.DefaultCellStyle.Format = "#,##0 \"VNĐ\"";
+            colUnitPrice.DefaultCellStyle.FormatProvider = CultureInfo.InvariantCulture;
         }
         private void SetupCategories()
         {
@@ -437,21 +439,18 @@ namespace Bai03
             using OpenFileDialog openFileDialog =
                 new OpenFileDialog();
 
-            openFileDialog.Title =
-                "Chọn ảnh sản phẩm";
+            openFileDialog.Title = "Chọn ảnh sản phẩm";
 
-            openFileDialog.Filter =
-                "Image Files|*.jpg;*.jpeg;*.png";
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png";
 
-            if (openFileDialog.ShowDialog()
-                == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string imagePath =
-                    openFileDialog.FileName;
+                string imagePath = openFileDialog.FileName;
 
                 if (picAvatar.Image != null)
                 {
                     picAvatar.Image.Dispose();
+                    picAvatar.Image = null;
                 }
 
                 using FileStream stream =
@@ -460,8 +459,7 @@ namespace Bai03
                         FileMode.Open,
                         FileAccess.Read);
 
-                picAvatar.Image =
-                    Image.FromStream(stream);
+                    picAvatar.Image = Image.FromStream(stream);
 
                 picAvatar.Tag = imagePath;
             }

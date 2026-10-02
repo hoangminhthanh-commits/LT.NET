@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices.Marshalling;
 using System.Text;
+using System.Linq;
 
 public abstract class PhuongTien
 {
@@ -14,10 +15,8 @@ public abstract class PhuongTien
         set
         {
             if (string.IsNullOrWhiteSpace(value))
-            {
                 throw new ArgumentException("Mã phương tiện không được để trống.");
-                _maPT = value;
-            }
+            _maPT = value;
         }
     }
     public string TenHang
@@ -36,7 +35,7 @@ public abstract class PhuongTien
         set
         {
             int namHienTai = DateTime.Now.Year;
-            if (value <= 1900 || value >= namHienTai)
+            if (value <= 1900 || value > namHienTai)
                 throw new ArgumentException($"Năm sản xuất phải từ 1900 den {namHienTai}.");
             _namSanXuat = value;
         }
@@ -127,7 +126,7 @@ public class XeMay : PhuongTien
         get => _dungTichXyLanh;
         set
         {
-            if(value < 0)
+            if(value <= 0)
                 throw new ArgumentException("Dung tích xy lanh phải lớn hơn 0!");
             _dungTichXyLanh = value;
         }
