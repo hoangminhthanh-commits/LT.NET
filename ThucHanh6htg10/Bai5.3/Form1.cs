@@ -6,7 +6,7 @@ namespace Bai5._3
         {
             InitializeComponent();
 
-            dgvProducts.AutoGenerateColumns = true;
+            dgvProducts.AutoGenerateColumns = false;
 
             productBindingSource.DataSource = products;
             dgvProducts.DataSource = productBindingSource;
