@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BaiTap1/BaiTap1.csproj" />
+  <Project Path="BaiTap2/BaiTap2.csproj" Id="5b4ebc26-f4ee-48f2-a6e2-f0c4924c8c6d" />
+  <Project Path="BaiTap3/BaiTap3.csproj" Id="af046ee3-6b96-4056-9c9d-1d50d83f1bda" />
+</Solution>
