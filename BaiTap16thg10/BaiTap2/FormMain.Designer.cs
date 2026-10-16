@@ -479,6 +479,7 @@
             // 
             // dgvPhieuMuon
             // 
+            dgvPhieuMuon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPhieuMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPhieuMuon.Columns.AddRange(new DataGridViewColumn[] { colMaPhieu, colMaSinhVien, colHoTenSinhVien, colThietBi, colSoLuong, colNgayMuon, colHanTra, colNgayTraThucTe });
             dgvPhieuMuon.Dock = DockStyle.Fill;
@@ -494,7 +495,6 @@
             colMaPhieu.HeaderText = "Mã phiếu mượn";
             colMaPhieu.MinimumWidth = 6;
             colMaPhieu.Name = "colMaPhieu";
-            colMaPhieu.Width = 125;
             // 
             // colMaSinhVien
             // 
@@ -502,7 +502,6 @@
             colMaSinhVien.HeaderText = "Mã sinh viên";
             colMaSinhVien.MinimumWidth = 6;
             colMaSinhVien.Name = "colMaSinhVien";
-            colMaSinhVien.Width = 125;
             // 
             // colHoTenSinhVien
             // 
@@ -510,7 +509,6 @@
             colHoTenSinhVien.HeaderText = "Họ tên sinh viên";
             colHoTenSinhVien.MinimumWidth = 6;
             colHoTenSinhVien.Name = "colHoTenSinhVien";
-            colHoTenSinhVien.Width = 125;
             // 
             // colThietBi
             // 
@@ -518,7 +516,6 @@
             colThietBi.HeaderText = "Thiết bị";
             colThietBi.MinimumWidth = 6;
             colThietBi.Name = "colThietBi";
-            colThietBi.Width = 125;
             // 
             // colSoLuong
             // 
@@ -526,7 +523,6 @@
             colSoLuong.HeaderText = "Số lượng";
             colSoLuong.MinimumWidth = 6;
             colSoLuong.Name = "colSoLuong";
-            colSoLuong.Width = 125;
             // 
             // colNgayMuon
             // 
@@ -534,7 +530,6 @@
             colNgayMuon.HeaderText = "Ngày mượn";
             colNgayMuon.MinimumWidth = 6;
             colNgayMuon.Name = "colNgayMuon";
-            colNgayMuon.Width = 125;
             // 
             // colHanTra
             // 
@@ -542,7 +537,6 @@
             colHanTra.HeaderText = "Hạn trả";
             colHanTra.MinimumWidth = 6;
             colHanTra.Name = "colHanTra";
-            colHanTra.Width = 125;
             // 
             // colNgayTraThucTe
             // 
@@ -550,7 +544,6 @@
             colNgayTraThucTe.HeaderText = "Ngày trả thực tế";
             colNgayTraThucTe.MinimumWidth = 6;
             colNgayTraThucTe.Name = "colNgayTraThucTe";
-            colNgayTraThucTe.Width = 125;
             // 
             // lblTimKiemVaLoc
             // 

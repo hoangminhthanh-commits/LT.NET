@@ -145,16 +145,16 @@
             // tableLayoutPanel5
             // 
             tableLayoutPanel5.ColumnCount = 1;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 0, 1);
             tableLayoutPanel5.Controls.Add(tableLayoutPanel6, 0, 0);
             tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(3, 326);
+            tableLayoutPanel5.Location = new Point(3, 216);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 2;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(1176, 123);
+            tableLayoutPanel5.Size = new Size(1176, 97);
             tableLayoutPanel5.TabIndex = 2;
             // 
             // tableLayoutPanel7
@@ -169,11 +169,11 @@
             tableLayoutPanel7.Controls.Add(chkFilterDate, 0, 0);
             tableLayoutPanel7.Controls.Add(cboFilterStatus, 3, 0);
             tableLayoutPanel7.Dock = DockStyle.Fill;
-            tableLayoutPanel7.Location = new Point(3, 64);
+            tableLayoutPanel7.Location = new Point(3, 51);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
             tableLayoutPanel7.RowCount = 1;
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.Size = new Size(1170, 56);
+            tableLayoutPanel7.Size = new Size(1170, 43);
             tableLayoutPanel7.TabIndex = 1;
             // 
             // lblStatus2
@@ -223,7 +223,7 @@
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 1;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(1170, 55);
+            tableLayoutPanel6.Size = new Size(1170, 42);
             tableLayoutPanel6.TabIndex = 0;
             // 
             // txtSearch
@@ -254,11 +254,11 @@
             tableLayoutPanel4.Controls.Add(btnUpdate, 1, 0);
             tableLayoutPanel4.Controls.Add(btnAdd, 0, 0);
             tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(3, 262);
+            tableLayoutPanel4.Location = new Point(3, 165);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(1176, 58);
+            tableLayoutPanel4.Size = new Size(1176, 45);
             tableLayoutPanel4.TabIndex = 1;
             // 
             // btnDelete
@@ -309,7 +309,7 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.Size = new Size(1176, 253);
+            tableLayoutPanel1.Size = new Size(1176, 156);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -338,12 +338,12 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.34F));
-            tableLayoutPanel2.Size = new Size(1170, 196);
+            tableLayoutPanel2.Size = new Size(1170, 118);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(178, 68);
+            txtPhone.Location = new Point(178, 42);
             txtPhone.Name = "txtPhone";
             txtPhone.Size = new Size(125, 27);
             txtPhone.TabIndex = 8;
@@ -367,7 +367,7 @@
             // lblPhone
             // 
             lblPhone.AutoSize = true;
-            lblPhone.Location = new Point(3, 65);
+            lblPhone.Location = new Point(3, 39);
             lblPhone.Name = "lblPhone";
             lblPhone.Size = new Size(100, 20);
             lblPhone.TabIndex = 1;
@@ -376,7 +376,7 @@
             // lblDoctor
             // 
             lblDoctor.AutoSize = true;
-            lblDoctor.Location = new Point(3, 130);
+            lblDoctor.Location = new Point(3, 78);
             lblDoctor.Name = "lblDoctor";
             lblDoctor.Size = new Size(50, 20);
             lblDoctor.TabIndex = 2;
@@ -394,7 +394,7 @@
             // lblAppointmentDate
             // 
             lblAppointmentDate.AutoSize = true;
-            lblAppointmentDate.Location = new Point(587, 65);
+            lblAppointmentDate.Location = new Point(587, 39);
             lblAppointmentDate.Name = "lblAppointmentDate";
             lblAppointmentDate.Size = new Size(73, 20);
             lblAppointmentDate.TabIndex = 4;
@@ -403,7 +403,7 @@
             // lblStatus1
             // 
             lblStatus1.AutoSize = true;
-            lblStatus1.Location = new Point(587, 130);
+            lblStatus1.Location = new Point(587, 78);
             lblStatus1.Name = "lblStatus1";
             lblStatus1.Size = new Size(78, 20);
             lblStatus1.TabIndex = 5;
@@ -419,7 +419,7 @@
             // cboDoctor
             // 
             cboDoctor.FormattingEnabled = true;
-            cboDoctor.Location = new Point(178, 133);
+            cboDoctor.Location = new Point(178, 81);
             cboDoctor.Name = "cboDoctor";
             cboDoctor.Size = new Size(151, 28);
             cboDoctor.TabIndex = 9;
@@ -427,7 +427,7 @@
             // cboStatus
             // 
             cboStatus.FormattingEnabled = true;
-            cboStatus.Location = new Point(762, 133);
+            cboStatus.Location = new Point(762, 81);
             cboStatus.Name = "cboStatus";
             cboStatus.Size = new Size(151, 28);
             cboStatus.TabIndex = 10;
@@ -435,7 +435,7 @@
             // dtpAppointmentDate
             // 
             dtpAppointmentDate.Format = DateTimePickerFormat.Short;
-            dtpAppointmentDate.Location = new Point(762, 68);
+            dtpAppointmentDate.Location = new Point(762, 42);
             dtpAppointmentDate.Name = "dtpAppointmentDate";
             dtpAppointmentDate.Size = new Size(250, 27);
             dtpAppointmentDate.TabIndex = 11;
@@ -448,11 +448,11 @@
             tableLayoutPanel3.Controls.Add(lblReason, 0, 0);
             tableLayoutPanel3.Controls.Add(txtReason, 1, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 205);
+            tableLayoutPanel3.Location = new Point(3, 127);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(1170, 45);
+            tableLayoutPanel3.Size = new Size(1170, 26);
             tableLayoutPanel3.TabIndex = 2;
             // 
             // lblReason
@@ -469,7 +469,7 @@
             txtReason.Location = new Point(178, 3);
             txtReason.Multiline = true;
             txtReason.Name = "txtReason";
-            txtReason.Size = new Size(125, 27);
+            txtReason.Size = new Size(125, 20);
             txtReason.TabIndex = 9;
             // 
             // tableLayoutMain
@@ -484,26 +484,27 @@
             tableLayoutMain.Location = new Point(0, 28);
             tableLayoutMain.Name = "tableLayoutMain";
             tableLayoutMain.RowCount = 4;
-            tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
+            tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 16F));
+            tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 51F));
             tableLayoutMain.Size = new Size(1182, 649);
             tableLayoutMain.TabIndex = 4;
             // 
             // dgvAppointments
             // 
             dgvAppointments.AllowUserToAddRows = false;
+            dgvAppointments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAppointments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAppointments.Columns.AddRange(new DataGridViewColumn[] { colAppointmentId, colPatientName, colPhone, colAppointmentDate, colDoctor, colReason, colStatus });
             dgvAppointments.Dock = DockStyle.Fill;
-            dgvAppointments.Location = new Point(3, 455);
+            dgvAppointments.Location = new Point(3, 319);
             dgvAppointments.MultiSelect = false;
             dgvAppointments.Name = "dgvAppointments";
             dgvAppointments.ReadOnly = true;
             dgvAppointments.RowHeadersWidth = 51;
             dgvAppointments.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAppointments.Size = new Size(1176, 191);
+            dgvAppointments.Size = new Size(1176, 327);
             dgvAppointments.TabIndex = 5;
             // 
             // colAppointmentId
@@ -513,7 +514,6 @@
             colAppointmentId.MinimumWidth = 6;
             colAppointmentId.Name = "colAppointmentId";
             colAppointmentId.ReadOnly = true;
-            colAppointmentId.Width = 125;
             // 
             // colPatientName
             // 
@@ -522,7 +522,6 @@
             colPatientName.MinimumWidth = 6;
             colPatientName.Name = "colPatientName";
             colPatientName.ReadOnly = true;
-            colPatientName.Width = 125;
             // 
             // colPhone
             // 
@@ -531,7 +530,6 @@
             colPhone.MinimumWidth = 6;
             colPhone.Name = "colPhone";
             colPhone.ReadOnly = true;
-            colPhone.Width = 125;
             // 
             // colAppointmentDate
             // 
@@ -540,7 +538,6 @@
             colAppointmentDate.MinimumWidth = 6;
             colAppointmentDate.Name = "colAppointmentDate";
             colAppointmentDate.ReadOnly = true;
-            colAppointmentDate.Width = 125;
             // 
             // colDoctor
             // 
@@ -549,7 +546,6 @@
             colDoctor.MinimumWidth = 6;
             colDoctor.Name = "colDoctor";
             colDoctor.ReadOnly = true;
-            colDoctor.Width = 125;
             // 
             // colReason
             // 
@@ -558,7 +554,6 @@
             colReason.MinimumWidth = 6;
             colReason.Name = "colReason";
             colReason.ReadOnly = true;
-            colReason.Width = 125;
             // 
             // colStatus
             // 
@@ -567,7 +562,6 @@
             colStatus.MinimumWidth = 6;
             colStatus.Name = "colStatus";
             colStatus.ReadOnly = true;
-            colStatus.Width = 125;
             // 
             // MainForm
             // 
