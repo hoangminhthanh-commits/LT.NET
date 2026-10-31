@@ -1,0 +1,62 @@
+CREATE DATABASE SalesDB;
+GO
+USE SalesDB;
+GO
+
+CREATE TABLE NhanVien(
+    MaNV INT IDENTITY(1,1) PRIMARY KEY,
+    TenNV NVARCHAR(100) NOT NULL,
+    SoDienThoai VARCHAR(15) UNIQUE,
+    ChucVu NVARCHAR(50)
+);
+
+CREATE TABLE KhachHang(
+    MaKH INT IDENTITY(1,1) PRIMARY KEY,
+    TenKH NVARCHAR(100) NOT NULL,
+    DienThoai VARCHAR(15) UNIQUE,
+    DiemTichLuy INT NOT NULL CONSTRAINT DF_KH_Diem DEFAULT 0
+);
+
+CREATE TABLE SanPham(
+    MaSP VARCHAR(20) PRIMARY KEY,
+    TenSP NVARCHAR(150) NOT NULL,
+    GiaBan DECIMAL(18,2) NOT NULL CHECK(GiaBan > 0),
+    SoLuongTon INT NOT NULL CHECK(SoLuongTon >= 0)
+);
+
+CREATE TABLE HoaDon(
+    MaHD INT IDENTITY(1,1) PRIMARY KEY,
+    NgayLap DATETIME NOT NULL DEFAULT GETDATE(),
+    MaNV INT NOT NULL,
+    MaKH INT NULL,
+    TongTien DECIMAL(18,2) NOT NULL,
+    CONSTRAINT FK_HD_NV FOREIGN KEY(MaNV) REFERENCES NhanVien(MaNV),
+    CONSTRAINT FK_HD_KH FOREIGN KEY(MaKH) REFERENCES KhachHang(MaKH)
+);
+
+CREATE TABLE ChiTietHoaDon(
+    MaHD INT NOT NULL,
+    MaSP VARCHAR(20) NOT NULL,
+    SoLuong INT NOT NULL CHECK(SoLuong > 0),
+    DonGia DECIMAL(18,2) NOT NULL CHECK(DonGia > 0),
+    CONSTRAINT PK_CTHD PRIMARY KEY(MaHD, MaSP),
+    CONSTRAINT FK_CTHD_HD FOREIGN KEY(MaHD) REFERENCES HoaDon(MaHD),
+    CONSTRAINT FK_CTHD_SP FOREIGN KEY(MaSP) REFERENCES SanPham(MaSP)
+);
+
+-- Dữ liệu mẫu để chạy thử (mật khẩu không áp dụng trong bài này)
+INSERT INTO NhanVien(TenNV, SoDienThoai, ChucVu)
+VALUES (N'Nguyễn Văn An','0900000001',N'Thu ngân'),
+       (N'Trần Thị Bình','0900000002',N'Quản lý');
+
+INSERT INTO KhachHang(TenKH, DienThoai)
+VALUES (N'Khách hàng Nguyễn Minh','0911111111'),
+       (N'Lê Thị Hoa','0922222222');
+
+INSERT INTO SanPham(MaSP,TenSP,GiaBan,SoLuongTon)
+VALUES ('SP001',N'Nước suối',7000,100),
+       ('SP002',N'Mì ăn liền',4500,200),
+       ('SP003',N'Sữa tươi',32000,50),
+       ('SP004',N'Bánh quy',25000,70),
+       ('SP005',N'Cà phê lon',12000,80);
+GO

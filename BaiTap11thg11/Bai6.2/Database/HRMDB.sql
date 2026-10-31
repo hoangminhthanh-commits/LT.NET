@@ -1,0 +1,56 @@
+CREATE DATABASE HRMDB;
+GO
+USE HRMDB;
+GO
+
+CREATE TABLE PhongBan
+(
+    MaPB INT IDENTITY(1,1) PRIMARY KEY,
+    TenPB NVARCHAR(100) NOT NULL,
+    Mota NVARCHAR(255)
+);
+GO
+
+CREATE TABLE NhanVien
+(
+    MaNV INT IDENTITY(1,1) PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    NgaySinh DATETIME NULL,
+    CCCD VARCHAR(20) NULL UNIQUE,
+    MaPB INT NULL,
+    LuongCoBan DECIMAL(18,2) NOT NULL CHECK (LuongCoBan > 0),
+    HeSoLuong FLOAT NOT NULL CONSTRAINT DF_NhanVien_HeSo DEFAULT 1.0,
+    CONSTRAINT FK_NhanVien_PhongBan FOREIGN KEY (MaPB) REFERENCES PhongBan(MaPB)
+);
+GO
+
+CREATE TABLE BangChamCong
+(
+    MaCong INT IDENTITY(1,1) PRIMARY KEY,
+    MaNV INT NOT NULL,
+    ThangNam VARCHAR(7) NOT NULL,
+    SoNgayCong FLOAT NOT NULL CONSTRAINT DF_CC_Ngay DEFAULT 0
+        CHECK (SoNgayCong >= 0 AND SoNgayCong <= 31),
+    SoGioOT FLOAT NOT NULL CONSTRAINT DF_CC_OT DEFAULT 0 CHECK (SoGioOT >= 0),
+    DaChot BIT NOT NULL CONSTRAINT DF_CC_DaChot DEFAULT 0,
+    CONSTRAINT FK_CC_NhanVien FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
+    CONSTRAINT UQ_CC_NhanVien_Thang UNIQUE (MaNV, ThangNam)
+);
+GO
+
+CREATE TABLE BangLuong
+(
+    MaLuong INT IDENTITY(1,1) PRIMARY KEY,
+    MaNV INT NOT NULL,
+    ThangNam VARCHAR(7) NOT NULL,
+    ThucLinh DECIMAL(18,2) NOT NULL,
+    CONSTRAINT FK_BL_NhanVien FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
+    CONSTRAINT UQ_BL_NhanVien_Thang UNIQUE (MaNV, ThangNam)
+);
+GO
+
+INSERT INTO PhongBan(TenPB,Mota) VALUES
+(N'Phòng Hành chính',N'Quản lý hành chính nhân sự'),
+(N'Phòng Kế toán',N'Quản lý tài chính kế toán'),
+(N'Phòng Kỹ thuật',N'Phụ trách kỹ thuật');
+GO
