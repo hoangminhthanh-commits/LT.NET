@@ -6,10 +6,10 @@ Lớp / Khóa: D19CNPM5
 
 ![Bai611](Images/Bai611.png)
 
-![Bai621](Images/Bai611.png)
+![Bai621](Images/Bai621.png)
 
-![Bai622](Images/Bai611.png)
+![Bai622](Images/Bai622.png)
 
-![Bai623](Images/Bai611.png)
+![Bai623](Images/Bai623.png)
 
-![Bai624](Images/Bai611.png)
+![Bai624](Images/Bai624.png)
